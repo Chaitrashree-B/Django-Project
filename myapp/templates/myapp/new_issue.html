@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Issue</title>
+</head>
+<body>
+    <h1>New Issue</h1>
+    <form method="POST" action="{% url 'new_issue' %}">
+        {% csrf_token %}
+        <label for="user_id">User ID:</label>
+        <input type="number" name="user_id" required><br>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" required><br>
+
+        <label for="problem">Problem:</label>
+        <textarea name="problem" rows="4" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
